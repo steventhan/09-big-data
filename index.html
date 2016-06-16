@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Geo JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/vendor/codefellows.png">
+  </head>
+  <body>
+    <h2>Big Data: geoJSON</h2>
+    <h3>The goal for this assignment is to simulate a data set that you may
+      encounter during project week!</h3>
+      <h3>Let's focus only on transforming this collection. No need to
+        invoke a constructor, or pass off control to Handlebars.</h3>
+        <h3>Start simple:
+          <p>
+            1. Transform the initial collection into
+              and array of each object's properties.
+          </p>
+          <p>
+            2. Next, try combining that
+              new collection with some other valuable info such as the coordinates
+              for each zip.
+          </p>
+          <p>
+            3. Also remove redundancies like the county, borough, city and state since we
+              already know the context, as our app would theoretically show, too.
+          </p>
+          <p>
+            4. For the zips where we have two or more neighborhoods, let's
+              eliminate all but the first one ("Greenwich Village, SoHo"
+              becomes "Greenwich Village").
+          </p>
+          <p>
+            5. Populate an array of the five 'densest' neighborhoods based on
+              zip occurrences.
+          </p>
+        </h3>
+    <script src="/vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="/scripts/zip.js"></script>
+  </body>
+</html>
