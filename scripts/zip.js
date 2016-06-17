@@ -13,7 +13,7 @@
         return zip.properties;
       }).reduce(function (acc, cur, indx, array) {
         cur.coordinates = data.features[indx].geometry.coordinates;
-        acc.push(cur)
+        acc.push(cur);
         return acc;
       }, []).map(function (zip) {
         return {
@@ -22,9 +22,21 @@
           "neighborhood" : zip.neighborhood,
           "coordinates" : zip.coordinates
         }
-      });
+      }).reduce(function (acc, cur, indx, array){
+        cur.neighborhood = cur.neighborhood.split(', ')[0];
+        acc.push(cur);
+        return acc;
+      }, []);
+
+    Zip.allNeighborhoods = Zip.allZip.map(function(zip) {
+      return {
+        "zip": zip.zip,
+        "neighborhood": zip.neighborhood
+      };
+    })
     });
   };
+
 
   module.Zip = Zip;
 })(window);
